@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>E-bankas</title>
+</head>
+
+<body class="mr-5">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <h3 class="ml-5 mt-5">Jūsų sąskaita</h3>
+            <form class="form-inline mt-3 ml-5">
+                <label class="sr-only" for="veiksmas">Veiksmas</label>
+                <input type="text" name="record" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2">
+                <div class="form-check mb-2 mr-sm-2">
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option value="1">Papildyti</option>
+                        <option value="2">Pasiimti</option>
+                    </select>
+                </div>
+            </form>
+            <div class="col-6">
+                <p class="ml-5 mt-2" id="account"></p>
+                <button type="submit" class="btn btn-success ml-5" id="calculate">Atlikti veiksmą</button>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <h3 class="ml-5 mt-5">Visos operacijos</h3>
+            <form class="form-inline mt-3 ml-5">
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option value="0">Visi įrašai</option>
+                    <option value="1">Įrašymai</option>
+                    <option value="2">Nuskaitymai</option>
+                </select>
+                <button type="submit" class="btn btn-success" id="show">Rodyti</button>
+            </form>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+                    <table class="table table-sm mt-3 ml-5 d-none" id="expenses">
+                        <thead>
+                            <tr>
+                                <th scope="col">Išlaidos <button class="btn btn-success ml-1" id="sortExpenses">Rūšiuoti</button></th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="withdrawals" class="form-control mb-2 mr-sm-2" placeholder="Filtruoti"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4">
+                    <table class="table table-sm mt-3 ml-5 d-none" id="income">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pajamos<button class="btn btn-success ml-1" id="sortIncome">Rūšiuoti</button></th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="deposits" class="form-control mb-2 mr-sm-2" placeholder="Filtruoti"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
